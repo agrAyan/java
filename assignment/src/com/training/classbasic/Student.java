@@ -1,10 +1,9 @@
-package com.training.assignmentOfClasses;
+package com.training.classbasic;
 
 public class Student {
 String stdname;
 String id;
-int marks;
-int sum=0;
+
 public Student(String stdname, String id) {
 	super();
 	this.stdname = stdname;
@@ -18,10 +17,12 @@ public void getDetails() {
 	
 }
 public void getMarks(int [] marks) {
+	int mark=0;
+	int sum=0;
 	for(int i: marks)
 		sum+=i;
-	this.marks= sum;
-	System.out.println("marks of the student is "+ this.marks);
+	mark= sum;
+	System.out.println("marks of the student is "+ mark);
 	System.out.println("average marks of a students"+ (int)sum/marks.length);
 }
 }

@@ -1,4 +1,4 @@
-package com.training.assignmentOfClasses;
+package com.training.classbasic;
 import java.util.*;
 public class StudentMain {
 public static void main(String[] args) {

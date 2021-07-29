@@ -1,4 +1,4 @@
-package com.training.assignmentOfClasses;
+package com.training.classbasic;
 
 public class Bank {
  double balance;
