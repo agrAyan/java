@@ -47,7 +47,7 @@ public class EmployeeMain {
 	    	}
 	        else
 	        {
-	        	System.out.println("please Enter correct designation");
+	        	System.out.println("please Enter correct designation as \t Manager \t Director \t Programmer");
 	        	 check=false;
 	        }
 	    return check;
