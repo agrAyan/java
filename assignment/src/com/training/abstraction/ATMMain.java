@@ -1,4 +1,4 @@
-package com.training.inheritance;
+package com.training.abstraction;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ public class ATMMain {
 	static Scanner kb = new Scanner(System.in);
 	static String exit = "";
 	static double bal = 5000;
-	static Bank b = new Bank(bal);
+	static Bank b = new Current(bal);
 
 	public static boolean checkWithdraw(double d) {
 		boolean check = false;
@@ -18,7 +18,7 @@ public class ATMMain {
 	}
 
 	public static void checkAccountType() {
-		System.out.println("enter account type as"+" S "+"or "+" C "+" or E to exit");
+		System.out.println("enter account type or E to exit");
 		String accountType = kb.next();
 
 		switch (accountType) {
@@ -36,11 +36,13 @@ public class ATMMain {
 					b.withdraw(with);
 				else
 					System.out.println("enter amonut less than balance");
-			} else {
+			} else if(check.equals("c")) {
 				System.out.print("Enter deposit amount");
 				double with = kb.nextDouble();
 				b.deposit(with);
 			}
+			else
+				System.out.print("please enter c or w");
 			break;
 		case "S":
 			b.getBalance();
@@ -62,6 +64,8 @@ public class ATMMain {
 				b.deposit(with);
 			}
 			break;
+		case "E":
+			System.exit(0);
 		default:
 			System.out.println("enter correct values");
 			break;
